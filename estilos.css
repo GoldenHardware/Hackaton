@@ -17,8 +17,14 @@ button:hover{filter:brightness(1.1);}
 #opciones{display:grid;gap:8px;margin:12px 0;}
 .opcion{text-align:left;background:#e8eefc;color:#1a1a2e;}
 body.oscuro .opcion{background:#1f2a44;color:#e8ecf4;}
-.opcion.ok{background:#35c28b;color:#05231a;}
-.opcion.mal{background:#ff6b6b;color:#fff;}
+/* En modo oscuro "body.oscuro .opcion" pesaba más que ".opcion.ok" y no se veían los colores de acierto/fallo */
+.opcion.ok,body.oscuro .opcion.ok{background:#35c28b;color:#05231a;}
+.opcion.mal,body.oscuro .opcion.mal{background:#ff6b6b;color:#fff;}
+button:disabled{cursor:default;filter:none;}
+.tiempo{height:8px;background:#d9dee8;border-radius:4px;overflow:hidden;margin-top:4px;}
+body.oscuro .tiempo{background:#263149;}
+#barraTiempo{height:100%;width:100%;background:#2a5fd0;transition:width 1s linear;}
+#barraTiempo.poco{background:#d64545;}
 .feedback{margin:8px 0;font-weight:600;min-height:1.3em;}
 ul{margin:8px 0 8px 20px;}
 table{width:100%;border-collapse:collapse;margin-top:12px;}

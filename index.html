@@ -12,6 +12,7 @@
     <p id="saludo" class="muted"></p>
     <div class="barra">
       <button type="button" id="btnTema" class="secundario">Cambiar tema</button>
+      <button type="button" id="btnTemporizador" class="secundario">Temporizador: Sí</button>
       <button type="button" id="btnResultados" class="secundario">Ver resultados</button>
       <button type="button" id="btnBorrar" class="peligro">Borrar datos</button>
     </div>
@@ -19,12 +20,16 @@
 
   <section id="inicio" class="card">
     <h2>¿Listo?</h2>
-    <p>5 preguntas sobre desarrollo web. ¡Suerte!</p>
+    <p>5 preguntas sobre desarrollo web. Puedes jugar con temporizador (15 segundos por pregunta) o sin él. ¡Suerte!</p>
     <button type="button" id="btnEmpezar">Empezar</button>
   </section>
 
   <section id="juego" class="card" hidden>
     <h2 id="textoPregunta"></h2>
+    <div id="zonaTiempo">
+      <p id="tiempo" class="muted"></p>
+      <div class="tiempo"><div id="barraTiempo"></div></div>
+    </div>
     <div id="opciones"></div>
     <p id="feedback" class="feedback"></p>
     <button type="button" id="btnSiguiente" hidden>Siguiente</button>
